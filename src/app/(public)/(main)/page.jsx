@@ -22,15 +22,15 @@ const HomePage = () => {
     <div>
       <BannerComponent />
       <div className="lg:mx-60 mx-5 mt-10">
-        <h1 className="lg:text-3xl text-lg font-semibold font-body">
+        <h1 className="lg:text-3xl text-xl font-semibold font-body">
           Belanja pakaian pria
         </h1>
         <CategoryPriaComponent />
-        <h1 className="lg:text-3xl text-lg font-semibold mt-7 font-body">
+        <h1 className="lg:text-3xl text-x; font-semibold mt-7 font-body">
           Belanja pakaian wanita
         </h1>
         <CategoryWanitaComponent />
-        <h1 className="mt-14 font-body font-bold text-lg lg:text-3xl">
+        <h1 className="mt-14 font-body font-bold text-xl lg:text-3xl">
           Koleksi Produk Terbaru
         </h1>
         <div className="mt-7 lg:px-12 lg:grid lg:grid-cols-2 max-lg:space-y-5">

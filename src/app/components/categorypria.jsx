@@ -12,31 +12,31 @@ const CategoryPria = () => {
     <div className="w-full mt-10 grid grid-cols-2 sm:grid-cols-3 lg:flex lg:space-x-5">
       <div className=" w-32 text-center">
         <Image src={KaosPria} alt="kaos pria" width={200} height={100} />
-        <h1 className="text-xl font-bold font-body mt-2">Kaos</h1>
+        <h1 className="lg:text-xl text-sm font-bold font-body mt-2">Kaos</h1>
       </div>
       <div className=" w-32 text-center">
         <Image src={JaketPria} alt="Jaket Pria" width={200} height={100} />
-        <h1 className="text-xl font-bold font-body mt-2">Jaket</h1>
+        <h1 className="lg:text-xl text-sm font-bold font-body mt-2">Jaket</h1>
       </div>
       <div className=" w-32 text-center">
         <Image src={FlannelPria} alt="Flannel Pria" width={200} height={100} />
-        <h1 className="text-xl font-bold font-body mt-2">Flannel</h1>
+        <h1 className="lg:text-xl text-sm font-bold font-body mt-2">Flannel</h1>
       </div>
       <div className=" w-32 text-center">
         <Image src={JeansPria} alt="Jeans Pria" width={200} height={100} />
-        <h1 className="text-xl font-bold font-body mt-2">Jeans</h1>
+        <h1 className="lg:text-xl text-sm font-bold font-body mt-2">Jeans</h1>
       </div>
       <div className=" w-32 text-center">
         <Image src={SweaterPria} alt="Sweater Pria" width={200} height={100} />
-        <h1 className="text-xl font-bold font-body mt-2">Sweater</h1>
+        <h1 className="lg:text-xl text-sm font-bold font-body mt-2">Sweater</h1>
       </div>
       <div className=" w-32 text-center">
         <Image src={HoddiePria} alt="Hoddie Pria" width={200} height={100} />
-        <h1 className="text-xl font-bold font-body mt-2">Hoddie</h1>
+        <h1 className="lg:text-xl text-sm font-bold font-body mt-2">Hoddie</h1>
       </div>
       <div className=" w-32 text-center">
         <Image src={SepatuPria} alt="Sepatu Pria" width={200} height={100} />
-        <h1 className="text-xl font-bold font-body mt-2">Sepatu</h1>
+        <h1 className="lg:text-xl text-sm font-bold font-body mt-2">Sepatu</h1>
       </div>
     </div>
   );
