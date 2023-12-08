@@ -3,8 +3,8 @@ import RingkasanCheckout from "@/app/components/keranjang/checkout/ringkasanchec
 
 const CheckouPage = () => {
   return (
-    <div className="mt-24 px-64 font-body justify-between flex w-full">
-      <div className="w-full pr-10">
+    <div className="mt-24 px-4 md:px-64 font-body flex flex-col md:flex-row justify-between w-full">
+      <div className="w-full pr-0 md:pr-10">
         <h1 className="text-2xl font-bold">Checkout</h1>
         <div className="mt-5">
           <h2 className="text-md font-bold">Alamat Pengiriman</h2>

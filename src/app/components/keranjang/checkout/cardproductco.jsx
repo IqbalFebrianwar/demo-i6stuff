@@ -3,8 +3,8 @@ import ImageProductSepatu from "@/assets/images/products/productsepatu.jpg"
 
 const CardproductCo =()=>{
     return (
-        <div className="w-full flex items-center space-x-5 mt-5">
-          <div className="flex space-x-2">
+        <div className="w-full flex flex-col md:flex-row items-center space-y-5 md:space-y-0 md:space-x-5 mt-5">
+          <div className="flex flex-row space-x-2 space-y-2 md:space-y-0 md:space-x-2">
             <Image
               src={ImageProductSepatu}
               width={80}

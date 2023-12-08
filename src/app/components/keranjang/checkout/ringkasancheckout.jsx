@@ -13,16 +13,16 @@ const RingkasanCheckout = () => {
     <div className="w-full shadow rounded-md p-5">
       <h1 className="font-bold text-md">Ringkasan belanja</h1>
       <div className="mt-5">
-        <div className="w-full justify-between flex">
+        <div className="flex flex-col sm:flex-row justify-between">
           <p>Total Harga Barang</p>
           <p>Rp.313.000</p>
         </div>
-        <div className="w-full justify-between flex">
+        <div className="flex flex-col sm:flex-row justify-between">
           <p>Total Ongkos Kirim</p>
           <p>Rp.12.000</p>
         </div>
       </div>
-      <div className="w-full mt-5 font-bold justify-between flex">
+      <div className="flex flex-col sm:flex-row mt-5 font-bold justify-between">
         <p>Total Belanja</p>
         <p>Rp.325.000</p>
       </div>
@@ -73,35 +73,37 @@ const RingkasanCheckout = () => {
                   <h1 className="text-md font-bold">Metode Pembayaran</h1>
                   <div className="flex border p-5 rounded-md items-center space-x-5">
                     <Image
+                      className="max-lg:w-10"
                       src={AlfaIcon}
                       width={70}
                       height={20}
                       alt="alfamart"
                     />
-                    <p className="font-bold">
+                    <p className="font-bold max-lg:text-sm">
                       Alfamart / Alfamidi / Lawson / Dan+Dan
                     </p>
                     <input type="radio" name="radio-1" className="radio" />
                   </div>
-                  <div className="flex border p-5 w-full rounded-md items-center space-x-64">
+                  <div className="flex border p-5 w-full rounded-md items-center space-x-48">
                     <div className="flex space-x-5 items-center">
                       <Image
+                        className="max-lg:w-10"
                         src={MandiriIcon}
                         width={70}
                         height={20}
                         alt="Mandiri"
                       />
-                      <p className="font-bold">Mandiri</p>
+                      <p className="font-bold max-lg:text-sm">Mandiri</p>
                     </div>
                     <input type="radio" name="radio-1" className="radio" />
                   </div>
                   <div>
                     <h1 className="text-md font-bold">Ringkasan Pembayaran</h1>
-                    <div className="w-full mt-5 font-bold justify-between flex">
+                    <div className="w-full max-lg:flex max-lg:flex-col mt-5 font-bold justify-between flex">
                       <p>Total Belanja</p>
                       <p>Rp.325.000</p>
                     </div>
-                    <div className="w-full mt-5 font-bold justify-between flex">
+                    <div className="w-full max-lg:flex max-lg:flex-col mt-5 font-bold justify-between flex">
                       <p>Biaya Layanan</p>
                       <p>Rp.2.500</p>
                     </div>
