@@ -13,11 +13,17 @@ const ProductPageComponent = () => {
   const [modalKomen, setModalKomen] = useState(false);
 
   return (
-    <div className="space-x-20 flex mt-24 mx-32">
-      <div className="rounded-md sticky top-20 overflow-hidden">
-        <Image width={500} src={ProductSepatu} alt="Sepatu" />
+    <>
+    <div className="space-x-4 sm:space-x-20 flex flex-col sm:flex-row mt-6 sm:mt-24 mx-4 sm:mx-32">
+      <div className="rounded-md top-20 overflow-hidden">
+        <Image
+          className="max-md:sticky max-lg:mt-20 max-lg:z-10 max:lgtop-20"
+          width={500}
+          src={ProductSepatu}
+          alt="Sepatu"
+        />
       </div>
-      <div className="grid">
+      <div className="grid sticky">
         <div className="tabs my-2">
           <button
             className={`tab tab-bordered ${
@@ -39,7 +45,7 @@ const ProductPageComponent = () => {
         {tabmenuSelected == 0 ? (
           //Detail Produk
           <>
-            <div className="mt-8 h-80 no-scrollbar overflow-y-auto">
+            <div className="mt-4 sm:mt-8 h-80 no-scrollbar overflow-y-auto">
               <span className="py-1 rounded-full bg-black px-2 text-center text-sm font-medium text-white">
                 Diskon 30%
               </span>
@@ -176,137 +182,113 @@ const ProductPageComponent = () => {
                 </div>
               ))}
             </div>
-            <div className="grid">
               <button
-                className="btn normal-case bg-white text-black border-2 border-black"
+                className="btn normal-case bg-white max-lg:mt-5 text-black border-2 border-black"
                 onClick={() => setModalKomen(true)}
               >
                 Tulis Komentar
               </button>
-              {modalKomen ? (
-                <>
-                  <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-                    <div className="relative w-auto my-6 mx-auto max-w-3xl">
-                      {/*content*/}
-                      <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-                        {/*header*/}
-                        <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
-                          <h3 className="text-3xl font-semibold">
-                            Filter Ulasan
-                          </h3>
-                          <button
-                            className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
-                            onClick={() => setModalKomen(false)}
-                          >
-                            <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
-                              ×
-                            </span>
-                          </button>
-                        </div>
-                        {/*body*/}
-                        <div className="relative p-6 flex-auto">
-                          <label className="form-control w-full max-w-xs">
-                            <div className="label">
-                              <span className="label-text">
-                                Unggah foto atau video
-                              </span>
-                            </div>
-                            <input
-                              type="file"
-                              className="file-input file-input-md file-input-bordered w-full max-w-xs"
-                            />
-                          </label>
-                          <div className="flex space-x-5 my-4">
-                            <h1 className="font-semibold">Pilih Rating :</h1>
-                            <div className="flex items-center space-x-2">
-                              <Image src={StarProduct} width={30} />
-                              <p className="text-md">1</p>
-                              <input
-                                type="radio"
-                                name="radio-1"
-                                className="radio"
-                              />
-                            </div>
-                            <div className="flex items-center space-x-2">
-                              <Image src={StarProduct} width={30} />
-                              <p className="text-md">2</p>
-                              <input
-                                type="radio"
-                                name="radio-1"
-                                className="radio"
-                              />
-                            </div>
-                            <div className="flex items-center space-x-2">
-                              <Image src={StarProduct} width={30} />
-                              <p className="text-md">3</p>
-                              <input
-                                type="radio"
-                                name="radio-1"
-                                className="radio"
-                              />
-                            </div>
-                            <div className="flex items-center space-x-2">
-                              <Image src={StarProduct} width={30} />
-                              <p className="text-md">4</p>
-                              <input
-                                type="radio"
-                                name="radio-1"
-                                className="radio"
-                              />
-                            </div>
-                            <div className="flex items-center space-x-2">
-                              <Image src={StarProduct} width={30} />
-                              <p className="text-md">5</p>
-                              <input
-                                type="radio"
-                                name="radio-1"
-                                className="radio"
-                              />
-                            </div>
-                          </div>
-                          <div>
-                            <label className="form-control w-full max-w-xs">
-                              <div className="label">
-                                <span className="label-text">
-                                  Tulis Komentar disini
-                                </span>
-                              </div>
-                              <input
-                                type="text"
-                                placeholder="Komentar"
-                                className="input input-bordered w-full max-w-xs"
-                              />
-                            </label>
-                          </div>
-                        </div>
-                        {/*footer*/}
-                        <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
-                          <button
-                            className="text-black background-transparent font-bold normal-case px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                            type="button"
-                            onClick={() => setModalKomen(false)}
-                          >
-                            Tutup
-                          </button>
-                          <button
-                            className="bg-black text-white active:bg-black font-bold normal-case text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                            type="button"
-                            onClick={() => setModalKomen(false)}
-                          >
-                            Kirim Ulasan
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
-                </>
-              ) : null}
-            </div>
+            
           </>
         )}
       </div>
     </div>
+      {modalKomen ? (
+        <>
+          <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+              {/*content*/}
+              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                {/*header*/}
+                <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
+                  <h3 className="text-3xl font-semibold">Filter Ulasan</h3>
+                  <button
+                    className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                    onClick={() => setModalKomen(false)}
+                  >
+                    <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+                      ×
+                    </span>
+                  </button>
+                </div>
+                {/*body*/}
+                <div className="relative p-6 flex-auto">
+                  <label className="form-control w-full max-w-xs">
+                    <div className="label">
+                      <span className="label-text">Unggah foto atau video</span>
+                    </div>
+                    <input
+                      type="file"
+                      className="file-input file-input-md file-input-bordered w-full max-w-xs"
+                    />
+                  </label>
+                  <h1 className="font-semibold">Pilih Rating :</h1>
+                  <div className="flex max-lg:grid max-lg:grid-cols-2 lg:space-x-5 my-4">
+                    <div className="flex items-center space-x-2">
+                      <Image src={StarProduct} width={30} />
+                      <p className="text-md">1</p>
+                      <input type="radio" name="radio-1" className="radio" />
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Image src={StarProduct} width={30} />
+                      <p className="text-md">2</p>
+                      <input type="radio" name="radio-1" className="radio" />
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Image src={StarProduct} width={30} />
+                      <p className="text-md">3</p>
+                      <input type="radio" name="radio-1" className="radio" />
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Image src={StarProduct} width={30} />
+                      <p className="text-md">4</p>
+                      <input type="radio" name="radio-1" className="radio" />
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Image src={StarProduct} width={30} />
+                      <p className="text-md">5</p>
+                      <input type="radio" name="radio-1" className="radio" />
+                    </div>
+                  </div>
+                  <div>
+                    <label className="form-control w-full max-w-xs">
+                      <div className="label">
+                        <span className="label-text">
+                          Tulis Komentar disini
+                        </span>
+                      </div>
+                      <input
+                        type="text"
+                        placeholder="Komentar"
+                        className="input input-bordered w-full max-w-xs"
+                      />
+                    </label>
+                  </div>
+                </div>
+                {/*footer*/}
+                <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
+                  <button
+                    className="text-black background-transparent font-bold normal-case px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    type="button"
+                    onClick={() => setModalKomen(false)}
+                  >
+                    Tutup
+                  </button>
+                  <button
+                    className="bg-black text-white active:bg-black font-bold normal-case text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    type="button"
+                    onClick={() => setModalKomen(false)}
+                  >
+                    Kirim Ulasan
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+        </>
+      ) : null}
+    </>
   );
 };
 export default ProductPageComponent;

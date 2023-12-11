@@ -1,4 +1,3 @@
-"use client"
 import ImageBanner from "@/assets/images/bannerlanding.jpg";
 import Image from "next/image";
 

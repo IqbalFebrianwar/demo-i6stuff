@@ -19,7 +19,7 @@ const CardProductComponent = dynamic(() =>
 
 const HomePage = () => {
   return (
-    <div>
+    <main>
       <BannerComponent />
       <div className="lg:mx-60 mx-5 mt-10">
         <h1 className="lg:text-3xl text-xl font-semibold font-body">
@@ -54,7 +54,7 @@ const HomePage = () => {
           ))}
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 export default HomePage;
