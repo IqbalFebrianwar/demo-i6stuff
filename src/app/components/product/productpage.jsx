@@ -118,7 +118,7 @@ const ProductPageComponent = () => {
                 )}
               </div>
             </div>
-            <div className="grid">
+            <div className="grid space-y-2">
               <button className="btn bg-white text-black border-2 border-black">
                 Keranjang
               </button>
