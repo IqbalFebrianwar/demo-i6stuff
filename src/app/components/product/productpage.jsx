@@ -11,6 +11,13 @@ const ProductPageComponent = () => {
   const [tabSelected, setTabSelected] = useState(0);
   const [tabmenuSelected, setTabmenuSelected] = useState(0);
   const [modalKomen, setModalKomen] = useState(false);
+  const [count, setCount] = useState(0);
+    const plusCount =()=>{
+        setCount (count => count + 1)
+    }
+    const minCount =()=>{
+        setCount (count => count - 1)
+    }
 
   return (
     <>
@@ -60,6 +67,11 @@ const ProductPageComponent = () => {
               <div className="flex mt-3 space-x-2 items-center">
                 <h1 className="font-body font-bold text-2xl">Rp.315.000</h1>
                 <h2 className="text-sm line-through ">Rp.450.000</h2>
+              </div>
+              <div className="space-x-2 font-body">
+                <button className={`w-7 h-7 items-center rounded-full text-xl ${count === 0 ? "text-gray-400 btn-disabled" : "text-white bg-black" } `} disabled={count === 0} onClick={minCount}>-</button>
+                <span className="font-semibold">{count}</span>
+                <button className="w-7 h-7 rounded-full text-xl text-white bg-black" onClick={plusCount}>+</button>
               </div>
               <div className="tabs my-2">
                 <button

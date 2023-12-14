@@ -2,19 +2,19 @@ import PopulerImageComponent from "@/assets/images/populerimage.webp";
 import dynamic from "next/dynamic";
 
 const BannerComponent = dynamic(() => 
-  import("@/app/components/banner"), {ssr : false}
+  import("@/app/components/banner")
 );
 const CategoryPriaComponent = dynamic(() =>
-  import("@/app/components/categorypria"), {ssr : false}
+  import("@/app/components/categorypria")
 );
 const CategoryWanitaComponent = dynamic(() =>
-  import("@/app/components/categorywanita"), {ssr : false}
+  import("@/app/components/categorywanita")
 );
 const CardPopulerComponent = dynamic(() =>
-  import("@/app/components/cardpopuler"), {ssr : false}
+  import("@/app/components/cardpopuler")
 );
 const CardProductComponent = dynamic(() =>
-  import("@/app/components/cardproduct"), {ssr : false}
+  import("@/app/components/cardproduct")
 );
 
 const HomePage = () => {
@@ -26,7 +26,7 @@ const HomePage = () => {
           Belanja pakaian pria
         </h1>
         <CategoryPriaComponent />
-        <h1 className="lg:text-3xl text-x; font-semibold mt-7 font-body">
+        <h1 className="lg:text-3xl text-xl font-semibold mt-7 font-body">
           Belanja pakaian wanita
         </h1>
         <CategoryWanitaComponent />
@@ -44,7 +44,7 @@ const HomePage = () => {
           ))}
         </div>
         <div className="grid space-x-2">
-          <h1 className="lg:text-3xl text-lg mt-10 font-body font-bold">Semua Produk</h1>
+          <h1 className="lg:text-3xl text-xl mt-10 font-body font-bold">Semua Produk</h1>
           {Array.from({ length: 5 }, () => (
             <div className="mt-10 space-x-5 lg:max-w-5xl no-scrollbar overflow-x-auto flex">
               {Array.from({ length: 10 }, () => (

@@ -10,17 +10,23 @@ const profilPage = () => {
         <p className="text-lg font-semibold">Jenny</p>
       </div>
 
-        <div className="w-full space-y-4 px-5">
-            <Link href="/keranjang" className="btn normal-case justify-start w-full bg-white text-black">
-                Keranjang
-            </Link>
-            <button className="btn normal-case justify-start w-full bg-white text-black">
-                Favorit
-            </button>
-            <button className="btn normal-case justify-start w-full bg-white text-black">
-                Tambah Produk
-            </button>
-        </div>
+      <div className="w-full space-y-4 px-5">
+        <Link
+          href="/keranjang"
+          className="btn normal-case justify-start w-full bg-white text-black"
+        >
+          Keranjang
+        </Link>
+        <Link href="/favorit" className="btn normal-case justify-start w-full bg-white text-black">
+          Favorit
+        </Link>
+        <Link href="/profil/tambahproduk" className="btn normal-case justify-start w-full bg-white text-black">
+          Tambah Produk
+        </Link>
+        <button className="btn mt-5 normal-case justify-center w-full bg-black text-white">
+          Logout
+        </button>
+      </div>
     </div>
   );
 };

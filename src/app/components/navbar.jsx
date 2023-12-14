@@ -7,6 +7,7 @@ import { useState } from "react";
 import XiconComp from "@/assets/svg/xicon.svg";
 import Link from "next/link";
 import BurgerIcon from "@/assets/svg/burgericon.svg";
+import FavIcon from "@/assets/svg/fav.svg"
 
 const NavbarComponent = () => {
   const [showModalDaftar, setShowmodalDaftar] = useState(false);
@@ -45,6 +46,9 @@ const NavbarComponent = () => {
         <div className="flex items-center space-x-5">
           <Link href="/keranjang" className="btn bg-white border-0">
             <Image src={CartIcon} width={25} alt="carticon" height={30} />
+          </Link>
+          <Link href="/favorit" className="btn max-md:hidden bg-white border-0">
+            <Image src={FavIcon} width={25} alt="favicon" height={30} />
           </Link>
           <button
             onClick={() => setShowmodalMasuk(true)}

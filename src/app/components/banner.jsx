@@ -1,5 +1,6 @@
 import ImageBanner from "@/assets/images/bannerlanding.jpg";
 import Image from "next/image";
+import Link from "next/link";
 
 const BannerComponent = () => {
   return (
@@ -13,12 +14,12 @@ const BannerComponent = () => {
           Look good, feel good, shop good
         </h1>
         <div className="flex justify-center text-center mt-10 space-x-10">
-          <button className="btn uppercase bg-transparent px-10 lg:text-lg font-body text-white border border-white hover:bg-white hover:text-black">
+          <Link href="/pria" className="btn uppercase bg-transparent px-10 lg:text-lg font-body text-white border border-white hover:bg-white hover:text-black">
            Pria
-          </button>
-          <button className="btn bg-transparent px-10 lg:text-lg uppercase font-body text-white border border-white hover:bg-white hover:text-black">
+          </Link>
+          <Link href="/wanita" className="btn bg-transparent px-10 lg:text-lg uppercase font-body text-white border border-white hover:bg-white hover:text-black">
             Wanita
-          </button>
+          </Link>
         </div>
       </div>
     </div>
