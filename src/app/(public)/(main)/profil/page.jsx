@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const profilPage = () => {
   return (
-    <div className="w-full font-body mt-24">
+    <div className="w-full lg:px-96 font-body mt-24">
       <div className="avatar mx-5 my-5 space-x-2 items-center">
         <div className="w-16 rounded-full">
           <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />

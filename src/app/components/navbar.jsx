@@ -7,7 +7,7 @@ import { useState } from "react";
 import XiconComp from "@/assets/svg/xicon.svg";
 import Link from "next/link";
 import BurgerIcon from "@/assets/svg/burgericon.svg";
-import FavIcon from "@/assets/svg/fav.svg"
+import FavIcon from "@/assets/svg/fav.svg";
 
 const NavbarComponent = () => {
   const [showModalDaftar, setShowmodalDaftar] = useState(false);
@@ -62,6 +62,13 @@ const NavbarComponent = () => {
           >
             Daftar
           </button>
+          <Link href="/profil" className="btn max-md:hidden bg-white border-0">
+            <div className="avatar">
+              <div className="w-8 rounded-full ring ring-black ring-offset-base-100 ring-offset-2">
+                <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
 
@@ -78,7 +85,7 @@ const NavbarComponent = () => {
                     className="p-1 ml-auto border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                     onClick={() => setShowmodalDaftar(false)}
                   >
-                    <Image src={XiconComp} width={20} />
+                    <Image src={XiconComp} alt="xicon" width={20} />
                   </button>
                 </div>
                 {/*body*/}
@@ -120,7 +127,7 @@ const NavbarComponent = () => {
                     className="p-1 ml-auto border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                     onClick={() => setShowmodalMasuk(false)}
                   >
-                    <Image src={XiconComp} width={20} />
+                    <Image src={XiconComp} alt="xicon" width={20} />
                   </button>
                 </div>
                 {/*body*/}

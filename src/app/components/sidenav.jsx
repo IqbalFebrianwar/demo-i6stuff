@@ -4,10 +4,12 @@ import Link from "next/link";
 import XiconComp from "@/assets/svg/xicon.svg";
 import Image from "next/image";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const SIdeNav = () => {
   const [showModalDaftar, setShowmodalDaftar] = useState(false);
   const [showModalMasuk, setShowmodalMasuk] = useState(false);
+  const router = useRouter();
 
   return (
     <>
@@ -19,34 +21,57 @@ const SIdeNav = () => {
         ></label>
         <ul className="menu space-y-5 font-body p-4 w-80 min-h-full bg-white text-base-content">
           <li>
-            <Link href="/profil" className="avatar">
+            <label
+              htmlFor="my-drawer"
+              className="avatar"
+              aria-label="close sidebar"
+              onClick={() => router.push("/profil")}
+            >
               <div className="w-16 rounded-full">
                 <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
               </div>
-              <label htmlFor="my-drawer" aria-label="close sidebar">
-                <p className="text-lg">Hai, Jenny</p>
-              </label>
-            </Link>
+              <p className="text-lg">Hai, Jenny</p>
+            </label>
           </li>
           <li>
-            <Link href="/keranjang" className="text-xl">
+            <label
+              htmlFor="my-drawer"
+              className="text-xl"
+              aria-label="close sidebar"
+              onClick={() => router.push("/keranjang")}
+            >
               Keranjang
-            </Link>
+            </label>
           </li>
           <li>
-            <Link href="/favorit" className="text-xl">
+            <label
+              htmlFor="my-drawer"
+              className="text-xl"
+              aria-label="close sidebar"
+              onClick={() => router.push("/favorit")}
+            >
               Favorit
-            </Link>
+            </label>
           </li>
           <li>
-            <Link href="/pria" className="text-xl">
+            <label
+              htmlFor="my-drawer"
+              className="text-xl"
+              aria-label="close sidebar"
+              onClick={() => router.push("/pria")}
+            >
               Pria
-            </Link>
+            </label>
           </li>
           <li>
-            <Link href="/wanita" className="text-xl">
+            <label
+              htmlFor="my-drawer"
+              className="text-xl"
+              aria-label="close sidebar"
+              onClick={() => router.push("/wanita")}
+            >
               Wanita
-            </Link>
+            </label>
           </li>
           <li>
             <button
